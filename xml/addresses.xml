@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<addresses>
+    <address id="myAddress">
+        <line>Maxine Muster</line>
+        <line>Musterweg 456</line>
+        <line>54321 Musterdorf</line>
+        <line>USt-ID: DE987654321</line>
+    </address>
+    <address id="companyA">
+        <line>Beispiel GmbH</line>
+        <line>Hauptstraße 456</line>
+        <line>98765 Traumstadt</line>
+    </address>
+    <address id="companyB">
+        <line>Firma XYZ</line>
+        <line>Nebenstraße 789</line>
+        <line>54321 Wunderland</line>
+    </address>
+</addresses>

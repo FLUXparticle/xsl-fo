@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<invoice>
+    <city>Musterstadt</city>
+    <date>06.05.2023</date>
+    <number>1234/56</number>
+    <company>companyB</company>
+    <course type="online" code="RX123">
+        <line>"Webentwicklung mit JavaScript"</line>
+        <line>vom 04.05. - 05.05.2023</line>
+        <line>mit einem Teilnehmer</line>
+    </course>
+    <positions>
+        <position text="2 Tage x 1.000 €" price="2000"/>
+        <position text="Skript" price="100"/>
+    </positions>
+</invoice>

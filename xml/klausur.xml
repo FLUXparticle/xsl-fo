@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<klausur>
+    <aufgabe je="2">
+        <text>Wahr oder falsch? Markieren Sie jede der Aussage eindeutig mit “Wahr” oder “Falsch”.</text>
+        <liste>
+            <text>Ein MVC-Programm besteht aus Model, View und Computer.<antwort>Falsch</antwort></text>
+            <text>Innere Klassen können auf die privaten Variablen der äußeren Klasse zugreifen.<antwort>Richtig</antwort></text>
+            <text>Die Größe einer <code>ArrayList</code> kann verändert werden.<antwort>Richtig</antwort></text>
+            <text>Ein HTTP-Server kann in Java ganz einfach mit der Klasse <code>Socket</code> implementiert werden.<antwort>Falsch</antwort></text>
+            <text>Enums können Methoden enthalten.<antwort>Wahr</antwort></text>
+            <text>Um einen neuen Thread zu starten müssen wir auf jeden Fall eine Klasse schreiben, die von der Klasse <code>Thread</code> erbt.<antwort>Falsch</antwort></text>
+        </liste>
+    </aufgabe>
+
+    <aufgabe je="2">
+        <text>Vervollständigen Sie diesen Java-Code, der eine Zeile an den Server sendet und die Antwort auf der Konsole ausgibt.</text>
+        <text style="code">
+try (Socket <antwort>_socket</antwort> = new Socket("localhost", 1114);
+
+   <antwort>_PrintStream</antwort> out = new PrintStream(socket.getOutputStream());  
+
+   Scanner in = new <antwort>_Scanner</antwort>(socket.getInputStream())) {
+
+   <antwort>_out</antwort>.println("Hallo Server!");
+  
+   String line = <antwort>_in</antwort>.nextLine();
+  
+   System.out.println("Der Server sagt: " + <antwort>_line</antwort>);
+
+} catch (IOException <antwort>_e</antwort>) {
+   e.printStackTrace();
+}
+        </text>
+    </aufgabe>
+
+    <aufgabe je="1">
+        <text>Auf der folgenden Seite ist ein Swing-Programm abgebildet. Markieren Sie die mit <code>?____?</code> markierten Stellen, ob sie zur GUI (View) oder zum Spiel (Model) gehören, oder ob sie der Verbindung zwischen beiden dienen (Controller).</text>
+        <pageBreak/>
+        <text size="10" style="code">
+public class Ratespiel extends JFrame {
+
+   private static final String SECRET = "secret";     ?<antwort>_Model</antwort>?
+
+   private JTextField textEins = new JTextField(15);
+
+   private JTextField textZwei = new JTextField(15);  ?<antwort>_View</antwort>?
+
+   private int fehler;  ?<antwort>_Model</antwort>?
+
+   public Ratespiel() {
+      setTitle("Ratespiel");
+      setDefaultCloseOperation(EXIT_ON_CLOSE);
+      setSize(250, 100);
+      setLayout(new FlowLayout());
+
+      add(new JLabel("Eingabe:"));
+      textEins.addActionListener(this::enter);
+      add(textEins);
+
+      add(new JLabel("Ausgabe:"));   ?<antwort>_View</antwort>?
+      add(textZwei);
+
+      fehler = 0;      ?<antwort>_Model</antwort>?
+   }
+
+   private void enter(ActionEvent event) {
+      String text = textEins.getText();  ?<antwort>_Controller</antwort>?
+      String ausgabe;
+      if (text.equals(SECRET)) {         ?<antwort>_Model</antwort>?
+        ausgabe = "Richtig!";
+      } else {
+         fehler++;
+         if (fehler &lt; 3) {            ?<antwort>_Model</antwort>?
+            ausgabe = "Falsch!";
+         } else {
+            ausgabe = "Verloren!";       ?<antwort>_Model</antwort>?
+         }
+      }
+      textZwei.setText(ausgabe);         ?<antwort>_Controller</antwort>?
+   }
+
+   public static void main(String[] args) {
+      new Ratespiel().setVisible(true);
+   }
+}
+        </text>
+        <pageBreak/>
+    </aufgabe>
+
+    <aufgabe>
+        <text>Schreiben Sie Klasse <code>RatespielModel</code>, die das Model abbildet, das sich aus der Analyse in der vorherigen Aufgabe ergibt. Die Klasse wird eine Methode <code>play</code> enthalten, die immer aufgerufen wird, wenn der Spieler ein Wort eingegeben hat.</text>
+        <text style="code"><antwort>
+public class RatespielModel {
+
+private static final String SECRET = "secret";<punkte>1</punkte>
+
+    int fehler = 0;<punkte>1</punkte>
+
+    public String play(String text) {        <punkte>1</punkte>
+        String ausgabe;
+        if (text.equals(SECRET)) {         <punkte>1</punkte>
+          ausgabe = "Richtig!";            <punkte>1</punkte>
+        } else {
+           fehler++;                       <punkte>1</punkte>
+           if (fehler &lt; 3) {            <punkte>1</punkte>
+              ausgabe = "Falsch!";         <punkte>1</punkte>
+           } else {
+              ausgabe = "Verloren!";       <punkte>1</punkte>
+           }
+        }
+        return ausgabe;                    <punkte>1</punkte>
+    }
+
+}
+        </antwort></text>
+        <pageBreak/>
+    </aufgabe>
+
+    <aufgabe>
+        <text>Es geht um die drei Klassen <code>Schule</code>, <code>Klasse</code> und <code>Schueler</code>. Alle drei haben eine Variable <code>name</code> vom Typ <code>String</code>. Welche durch den Konstruktor initialisiert wird. Eine <code>Schule</code> hat mehrere <code>Klasse</code>n und mehrere <code>Schueler</code>. Jeder <code>Schueler</code> ist einer bestimmten <code>Klasse</code> zugeordnet. Jeder <code>Schueler</code> hat eine Methode <code>getName()</code> und <code>getKlassenName()</code>, die einen <code>String</code> mit dem Namen seiner Klasse zurück gibt. Schreiben Sie die beiden Klassen <code>Klasse</code> und <code>Schueler</code>. Wie sie aus der Klasse <code>Schule</code> unten schon sehen können, wird <code>Schueler</code> eine Innere Klasse von <code>Klasse</code> sein.
+        </text>
+        <text style="code">
+public class Schule {
+  
+  private String name;
+  
+  private Klasse[] klassen;
+  
+  private Klasse.Schueler[] schueler;
+  
+  public Schule(String name) {
+    this.name = name;
+    
+    klassen = new Klasse[] {
+      new Klasse("1a"),
+      new Klasse("1b"),
+      new Klasse("1c"),
+    };
+    
+    schueler = new Klasse.Schueler[] {
+      klassen[0].new Schueler("Martin"),
+      klassen[0].new Schueler("Stefan"),
+      klassen[1].new Schueler("Tetje"),
+      klassen[2].new Schueler("Cordula"),
+    };
+  }
+  
+  public static void main(String[] args) {
+    Schule schule = new Schule("Grundschule");
+    
+    for (Klasse.Schueler s : schule.schueler) {
+      System.out.println(s.getName()+" in "+s.getKlassenName());
+    }
+  }
+}
+    </text>
+    <pageBreak/>
+    <text>Platz für Aufgabe <nr/>:</text>
+    <text style="code">
+        <antwort>
+public class Klasse { <punkte>2</punkte>
+
+  public class Schueler { <punkte>2</punkte>
+  
+    private String name; <punkte>2</punkte>
+    
+    public Schueler(String name) { <punkte>2</punkte>
+      this.name = name; <punkte>1</punkte>
+    }
+    
+    public String getName() { <punkte>2</punkte>
+      return name; <punkte>1</punkte>
+    }
+    
+    public String getKlassenName() { <punkte>2</punkte>
+      return Klasse.this.name; <punkte>2</punkte>
+    }
+  }
+  
+  private String name; <punkte>2</punkte>
+  
+  public Klasse(String name) { <punkte>2</punkte>
+    this.name = name; <punkte>1</punkte>
+  }
+  
+}
+        </antwort>
+    </text>
+        <pageBreak/>
+    </aufgabe>
+
+    <aufgabe>
+        <text>Gegeben ist folgende Tabelle <code>Person</code> in einer Datenbank:</text>
+        <tabelle>
+            <zeile>
+                <spalte breite="80"><text style="bold center">Vorname</text></spalte>
+                <spalte breite="80"><text style="bold center">Nachname</text></spalte>
+                <spalte breite="160"><text style="bold center">E-Mail</text></spalte>
+            </zeile>
+            <zeile>
+                <spalte><text>Bob</text></spalte>
+                <spalte><text>Collins</text></spalte>
+                <spalte><text>bob.collins@yahoo.com</text></spalte>
+            </zeile>
+            <zeile>
+                <spalte><text>Rebecca</text></spalte>
+                <spalte><text>Cabeca</text></spalte>
+                <spalte><text>rebecca.cabeca@gmail.com</text></spalte>
+            </zeile>
+            <zeile>
+                <spalte><text>Anthony</text></spalte>
+                <spalte><text>Clark</text></spalte>
+                <spalte><text>anthony.clark@gmail.com</text></spalte>
+            </zeile>
+        </tabelle>
+        <text>Die Methode <code>getPersonen()</code> gibt die Tabelle in Form einer <code>List&lt;Person&gt;</code> zurück. Welche Ausgabe hat das folgende Programm?</text>
+        <text style="code">
+Collection&lt;Person&gt; personen = getPersonen();
+for (Person p : personen) {
+  String text = p.getEMail() + ": "
+            + p.getNachname() + ", "
+            + p.getVorname();
+  System.out.println(text);
+}
+        </text>
+        <text>Welche Ausgabe hat dieses Programm?</text>
+        <text style="code"> <antwort>
+            bob.collins@yahoo.com: Collins, Bob <punkte>3</punkte>
+            rebecca.cabeca@gmail.com: Cabeca, Rebecca <punkte>3</punkte>
+            anthony.clark@gmail.com: Clark, Anthony <punkte>3</punkte>
+        </antwort> </text>
+        <pageBreak/>
+    </aufgabe>
+
+    <aufgabe>
+        <text>Ergänzen Sie folgende deklaration eines Enums so, dass es eine Methode <code>int getPunkte()</code> enthält, welche die Anzahl der Punkte auf der jeweiligen Würfelseite als <code>int</code> zurück gibt.</text>
+        <text style="code">
+public enum Wuerfel {
+
+    EINS(<antwort>_1</antwort>), ZWEI(<antwort>_2</antwort>), DREI(<antwort>_3</antwort>),
+
+    VIER(<antwort>_4</antwort>), FUENF(<antwort>_5</antwort>), SECHS(<antwort>_6</antwort>); <antwort><punkte>4</punkte></antwort>
+
+<antwort>
+    private int punkte; <punkte>2</punkte>
+
+    private Wuerfel(int punkte) { <punkte>2</punkte>
+    this.punkte = punkte; <punkte>2</punkte>
+    }
+
+    public int getPunkte() { <punkte>2</punkte>
+    return punkte; <punkte>2</punkte>
+    }</antwort>
+}
+        </text>
+    </aufgabe>
+
+    <aufgabe>
+        <text>
+            Auf der folgenden Seite sehen Sie die Test-Klasse <code>ZahlenTest</code>, welche die Klasse <code>Zahlen</code> testet. Vervollständigen Sie die Klasse Zahlen, damit sie den Test besteht. Schreiben Sie eine Lösung, die einen Anspruch darauf hat vollständig zu sein, also auch andere Tests bestehen würde.
+        </text>
+
+        <text>
+            Die Aufgabe der Methode <code>zahlen</code> ist es die Ziffern, die sie als Parameter bekommt, als Liste von Wörter zurück zu geben. Der Parameter <code>ziffern</code> verhält sich wie ein <code>int[]</code>.
+        </text>
+
+        <text>
+            Das Interface <code>Map</code> definiert zwei Methode, die hier von Bedeutung sind. <code>put(key, value)</code> speichert den Wert <code>value</code> unter dem Schlüssel <code>key</code>. Die Methode <code>get(key)</code> gibt den unter dem Schlüssel <code>key</code> gespeicherten Wert wieder zurück.
+        </text>
+
+        <text>
+            Beim Interface <code>List</code> ist nur die Methode <code>add(value)</code> für die Aufgabe interessant. Sie hängt den Wert <code>value</code> am Ende der Liste an.
+        </text>
+        <pageBreak/>
+        <text style="code">
+public class ZahlenTest {
+    @Test
+    public void test735() {
+        List&lt;String&gt; actual = new Zahlen().zahlen(7, 3, 5);
+        assertEquals("[Sieben, Drei, Fünf]", actual.toString());
+    }
+
+    @Test
+    public void test123() {
+        List&lt;String&gt; actual = new Zahlen().zahlen(1, 2, 3);
+        assertEquals("[Eins, Zwei, Drei]", actual.toString());
+    }
+}
+        </text>
+        <text style="code">
+public class Zahlen {
+
+    private Map&lt;Integer, String&gt; zahlen;
+
+    public Zahlen() {
+        zahlen = new HashMap&lt;&gt;();
+        zahlen.put(1, "Eins"); zahlen.put(2, "Zwei");
+        zahlen.put(3, "Drei"); zahlen.put(4, "Vier");
+        zahlen.put(5, "Fünf"); zahlen.put(6, "Sechs");
+        zahlen.put(7, "Sieben"); zahlen.put(8, "Acht");
+        zahlen.put(9, "Neun"); zahlen.put(0, "Zehn");
+    }
+
+    public List&lt;String&gt; zahlen(int... ziffern) {
+		<antwort>
+			List&lt;String&gt; result = new ArrayList&lt;&gt;();<punkte>2</punkte>
+        for (int z : ziffern) {<punkte>2</punkte>
+            String str = zahlen.get(z);<punkte>2</punkte>
+            result.add(str);<punkte>2</punkte>
+        }
+				return result;<punkte>2</punkte>
+
+
+
+
+
+
+
+			</antwort>
+    }
+}	
+        </text>
+    </aufgabe>
+
+</klausur>
