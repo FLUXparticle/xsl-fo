@@ -1,0 +1,240 @@
+<properties>
+  <property name='Baltic Avenue' color='purple'>
+    <price>60</price>
+    <mortgage>30</mortgage>
+    <rent>4</rent>
+    <house1>20</house1>
+    <house2>60</house2>
+    <house3>180</house3>
+    <house4>320</house4>
+    <hotel>450</hotel>
+  </property>
+  <property name='Reading Railroad' color='rr'>
+    <price>200</price>
+    <mortgage>100</mortgage>
+    <rent>25</rent>
+  </property>
+  <property name='Oriental Avenue' color='periwinkle'>
+    <price>100</price>
+    <mortgage>50</mortgage>
+    <rent>6</rent>
+    <house1>30</house1>
+    <house2>90</house2>
+    <house3>270</house3>
+    <house4>400</house4>
+    <hotel>550</hotel>
+  </property>
+  <property name='Vermont Avenue' color='periwinkle'>
+    <price>100</price>
+    <mortgage>50</mortgage>
+    <rent>6</rent>
+    <house1>30</house1>
+    <house2>90</house2>
+    <house3>270</house3>
+    <house4>400</house4>
+    <hotel>550</hotel>
+  </property>
+  <property name='Connecticut Avenue' color='periwinkle'>
+    <price>120</price>
+    <mortgage>60</mortgage>
+    <rent>8</rent>
+    <house1>40</house1>
+    <house2>100</house2>
+    <house3>300</house3>
+    <house4>450</house4>
+    <hotel>600</hotel>
+  </property>
+  <property name='St. Charles Place' color='magenta'>
+    <price>140</price>
+    <mortgage>70</mortgage>
+    <rent>10</rent>
+    <house1>50</house1>
+    <house2>150</house2>
+    <house3>450</house3>
+    <house4>625</house4>
+    <hotel>750</hotel>
+  </property>
+  <property name='Electric Company' color='utility'>
+    <price>150</price>
+    <mortgage>75</mortgage>
+  </property>
+  <property name='States Avenue' color='magenta'>
+    <price>140</price>
+    <mortgage>70</mortgage>
+    <rent>10</rent>
+    <house1>50</house1>
+    <house2>150</house2>
+    <house3>450</house3>
+    <house4>625</house4>
+    <hotel>750</hotel>
+  </property>
+  <property name='Virginia Avenue' color='magenta'>
+    <price>160</price>
+    <mortgage>80</mortgage>
+    <rent>12</rent>
+    <house1>60</house1>
+    <house2>180</house2>
+    <house3>500</house3>
+    <house4>700</house4>
+    <hotel>900</hotel>
+  </property>
+  <property name='Pennsylvania Railroad' color='rr'>
+    <price>200</price>
+    <mortgage>100</mortgage>
+    <rent>25</rent>
+  </property>
+  <property name='St. James Place' color='orange'>
+    <price>180</price>
+    <mortgage>90</mortgage>
+    <rent>14</rent>
+    <house1>70</house1>
+    <house2>200</house2>
+    <house3>550</house3>
+    <house4>750</house4>
+    <hotel>950</hotel>
+  </property>
+  <property name='Tennessee Avenue' color='orange'>
+    <price>180</price>
+    <mortgage>90</mortgage>
+    <rent>14</rent>
+    <house1>70</house1>
+    <house2>200</house2>
+    <house3>550</house3>
+    <house4>750</house4>
+    <hotel>950</hotel>
+  </property>
+  <property name='New York Avenue' color='orange'>
+    <price>200</price>
+    <mortgage>100</mortgage>
+    <rent>16</rent>
+    <house1>80</house1>
+    <house2>220</house2>
+    <house3>600</house3>
+    <house4>800</house4>
+    <hotel>1000</hotel>
+  </property>
+  <property name='Kentucky Avenue' color='red'>
+    <price>220</price>
+    <mortgage>110</mortgage>
+    <rent>18</rent>
+    <house1>90</house1>
+    <house2>250</house2>
+    <house3>700</house3>
+    <house4>875</house4>
+    <hotel>1050</hotel>
+  </property>
+  <property name='Indiana Avenue' color='red'>
+    <price>220</price>
+    <mortgage>110</mortgage>
+    <rent>18</rent>
+    <house1>90</house1>
+    <house2>250</house2>
+    <house3>700</house3>
+    <house4>875</house4>
+    <hotel>1050</hotel>
+  </property>
+  <property name='Illinois Avenue' color='red'>
+    <price>240</price>
+    <mortgage>120</mortgage>
+    <rent>20</rent>
+    <house1>100</house1>
+    <house2>300</house2>
+    <house3>750</house3>
+    <house4>925</house4>
+    <hotel>1100</hotel>
+  </property>
+  <property name='B&amp;O Railroad' color='rr'>
+    <price>200</price>
+    <mortgage>100</mortgage>
+    <rent>25</rent>
+  </property>
+  <property name='Atlantic Avenue' color='yellow'>
+    <price>260</price>
+    <mortgage>130</mortgage>
+    <rent>22</rent>
+    <house1>110</house1>
+    <house2>330</house2>
+    <house3>800</house3>
+    <house4>975</house4>
+    <hotel>1150</hotel>
+  </property>
+  <property name='Ventnor Avenue' color='yellow'>
+    <price>260</price>
+    <mortgage>130</mortgage>
+    <rent>22</rent>
+    <house1>110</house1>
+    <house2>330</house2>
+    <house3>800</house3>
+    <house4>975</house4>
+    <hotel>1150</hotel>
+  </property>
+  <property name='Water Works' color='utility'>
+    <price>150</price>
+    <mortgage>75</mortgage>
+  </property>
+  <property name='Marvin Gardens' color='yellow'>
+    <price>280</price>
+    <mortgage>140</mortgage>
+    <rent>24</rent>
+    <house1>120</house1>
+    <house2>360</house2>
+    <house3>850</house3>
+    <house4>1025</house4>
+    <hotel>1200</hotel>
+  </property>
+  <property name='Pacific Avenue' color='green'>
+    <price>300</price>
+    <mortgage>150</mortgage>
+    <rent>26</rent>
+    <house1>130</house1>
+    <house2>390</house2>
+    <house3>900</house3>
+    <house4>1100</house4>
+    <hotel>1275</hotel>
+  </property>
+  <property name='North Carolina Avenue' color='green'>
+    <price>300</price>
+    <mortgage>150</mortgage>
+    <rent>26</rent>
+    <house1>130</house1>
+    <house2>390</house2>
+    <house3>900</house3>
+    <house4>1100</house4>
+    <hotel>1275</hotel>
+  </property>
+  <property name='Pennsylvania Avenue' color='green'>
+    <price>320</price>
+    <mortgage>160</mortgage>
+    <rent>28</rent>
+    <house1>150</house1>
+    <house2>450</house2>
+    <house3>1000</house3>
+    <house4>1200</house4>
+    <hotel>1400</hotel>
+  </property>
+  <property name='Short Line' color='rr'>
+    <price>200</price>
+    <mortgage>100</mortgage>
+    <rent>25</rent>
+  </property>
+  <property name='Park Place' color='blue'>
+    <price>350</price>
+    <mortgage>175</mortgage>
+    <rent>35</rent>
+    <house1>175</house1>
+    <house2>500</house2>
+    <house3>1100</house3>
+    <house4>1300</house4>
+    <hotel>1500</hotel>
+  </property>
+  <property name='Boardwalk' color='blue'>
+    <price>400</price>
+    <mortgage>200</mortgage>
+    <rent>50</rent>
+    <house1>200</house1>
+    <house2>600</house2>
+    <house3>1400</house3>
+    <house4>1700</house4>
+    <hotel>2000</hotel>
+  </property>
+</properties>
